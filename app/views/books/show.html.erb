@@ -2,7 +2,8 @@
 <p><%= @book.title></p>
 <p>Body:</p>
 <p><%= @book.body %></p>
-<a class="edit"><=% link_to Edit, "/books/#{book.id}" %></a>
-　　　　　　　　　　　　　　　　<!-- リンク先は要調整 -->
+<a class="edit" href="/books/#{book.id}"></a>
+　　　　　　　　　　<!-- リンク先は要調整 -->
+<!--こっちが理想的か？ %= link_to "Edit", edit_book_path(@book.id) %> -->
 "|"
-<a class="back"><%= link_to back, "/books" %></a>
+<a class="back" href="/books">Back</a>
