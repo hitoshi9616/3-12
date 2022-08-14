@@ -38,3 +38,13 @@ p {
   line-height: 18px;
   margin: 33px;
 }
+
+thead {
+  width: 90%;
+}
+
+
+
+table {
+  width: 90%;
+}
