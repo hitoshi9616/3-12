@@ -5,18 +5,16 @@
 <% if @book.errors.any? %>
   <%= @lbook.errors.count %> errors prohibited this book from being saved:
   <ul>
-    <% @book.errors.full_messages.each do |message| %>
+    <% @list.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
 <% end %>
 
-<p>Title:</p>
-<p><%= @book.title></p>
-<p>Body:</p>
-<p><%= @book.body %></p>
-<a class="edit" href="/books/#{book.id}"></a>
-　　　　　　　　　　<!-- リンク先は要調整 -->
-<!--こっちが理想的か？ %= link_to "Edit", edit_book_path(@book.id) %> -->
-"|"
+<p>Title:  <%= @book.title %></p>
+
+<p>Body:  <%= @book.body %></p>
+
+<a class="edit"><%= link_to "Edit", edit_book_path(@book.id) %></a>
+|
 <a class="back" href="/books">Back</a>
