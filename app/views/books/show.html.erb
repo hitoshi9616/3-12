@@ -11,11 +11,18 @@
       <% end %>
     </ul>
   <% end %>
-</div
+</div>
 
-<p>Title:  <%= @book.title %></p>
+<p>
+  <strong>Title:</strong>  
+  <%= @book.title %>
+</p>
 
-<p>Body:  <%= @book.body %></p>
-<a class="edit"><%= link_to "Edit", edit_book_path(@book.id) %></a>
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
 |
-<a class="back" href="/books">Back</a>
+<%= link_to "Back", '/books' %>
